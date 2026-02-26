@@ -1,0 +1,2 @@
+# Python package requirements for the simple ARC‑AGI‑3 agent environment
+arc-agi
