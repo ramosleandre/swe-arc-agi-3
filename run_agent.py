@@ -41,8 +41,8 @@ def run_game(
         render_mode: One of ``"terminal"``, ``"terminal-fast"`` or ``"human"``.
     """
     # Initialize the toolkit in OFFLINE mode (local games only).  The
-    # OperationMode can be switched to ONLINE to play games via the API.
-    arc = Arcade()
+    # OperationMode can be switched to ONLINE to play games via the API do not change it.
+    arc = Arcade(operation_mode=OperationMode.OFFLINE)
     env = arc.make(game_id, render_mode=render_mode)
     if env is None:
         raise RuntimeError(f"Game {game_id} could not be loaded. Ensure the environment files are available and the ID is correct.")
